@@ -1,0 +1,14 @@
+version: "3.3"
+services:
+  ecomm:
+    build: .
+    ports:
+      - "8888:80"
+  food:
+    image: prudwe/food
+    ports:
+      - "7777:80"
+  httpd:
+    image: httpd:alpine
+    ports:
+      - "80:80"             
